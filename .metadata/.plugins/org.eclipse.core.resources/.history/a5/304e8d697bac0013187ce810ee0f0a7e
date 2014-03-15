@@ -19,10 +19,10 @@ public class MainActivity extends Activity {
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
-//        eventsTab = actionBar.newTab().setText("Events");
-//        mapTab = actionBar.newTab().setText("Map");
-//        voteTab = actionBar.newTab().setText("Vote");
-//        aboutUsTab = actionBar.newTab().setText("About Us");
+        eventsTab = actionBar.newTab().setText("Events");
+        mapTab = actionBar.newTab().setText("Map");
+        voteTab = actionBar.newTab().setText("Vote");
+        aboutUsTab = actionBar.newTab().setText("About Us");
         
         eventsTab.setTabListener(new MyTabListener(eventsFragment));
         mapTab.setTabListener(new MyTabListener(mapFragment));
