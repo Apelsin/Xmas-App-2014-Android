@@ -14,8 +14,11 @@ public class MyTabListener implements ActionBar.TabListener {
 		this.fragment = fragment;
 	}
 	
-	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+    public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		ft.replace(R.id.fragment_container, fragment);
+		LayoutInflater inflater = LayoutInflater.from(tab.getActivity().getApplicationContext()); // 1
+		//FrameLayout  theInflatedView =(FrameLayout) 
+				inflater.inflate(R.layout.about, null);
 	}
 	
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
