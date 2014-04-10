@@ -25,6 +25,12 @@
         android:layout_marginLeft="10dp"
         android:text="@string/Introduction"
         android:textSize="21sp" />
+    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate" />
 
 </LinearLayout>
 </ScrollView>

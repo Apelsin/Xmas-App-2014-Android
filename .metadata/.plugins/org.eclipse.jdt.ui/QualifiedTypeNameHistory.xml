@@ -9,4 +9,7 @@
 <fullyQualifiedTypeName name="android.app.FragmentTransaction"/>
 <fullyQualifiedTypeName name="android.app.ActionBar.Tab"/>
 <fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
 </qualifiedTypeNameHistroy>
