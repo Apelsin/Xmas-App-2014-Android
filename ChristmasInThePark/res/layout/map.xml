@@ -23,8 +23,8 @@
 
     <ImageView
         android:accessibilityLiveRegion="none"
-        android:layout_width="fill_parent"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:scaleType="fitXY"
         android:layout_gravity="center"
         android:background="@drawable/map" />

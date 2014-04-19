@@ -1,15 +1,12 @@
 package com.example.christmasinthepark;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileWriter;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
-
-import org.apache.http.cookie.Cookie;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -30,44 +27,34 @@ public class EventsTab extends Fragment {
 		View view = inflater.inflate(R.layout.events, container, false);
 
 		final ListView listView = (ListView) view.findViewById(R.id.listView);
-		eventsMap.put(0, new Event("Event 1 Title", "Location 1","time"));
+		/*eventsMap.put(0, new Event("Event 1 Title", "Location 1","time"));
 		eventsMap.put(1, new Event("Event 2 Title", "Location 2","time"));
 		eventsMap.put(2, new Event("Event 3 Title", "Location 3","time"));
 		eventsMap.put(3, new Event("Event 4 Title", "Location 4","time"));
 		eventsMap.put(4, new Event("Event 5 Title", "Location 5","time"));
-		eventsMap.put(5, new Event("Event 6 Title", "Location 6","time"));
-		//read(eventsMap);
+		eventsMap.put(5, new Event("Event 6 Title", "Location 6","time"));*/
+		addEvents(eventsMap);
 		
 		 listView.setOnItemClickListener(new OnItemClickListener() {
 			 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				// ListView Clicked item index
-	              int itemPosition     = arg2;
-	              // ListView Clicked item value
-	             // String  itemValue    = (String) listView.getItemAtPosition(arg2);
-	     //Toast.makeText(getApplicationContext(),"Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG).show();
+	              int itemPosition = arg2;
 	              Intent intent = new Intent(Intent.ACTION_INSERT);
 	        		intent.setType("vnd.android.cursor.item/event");
 	        		intent.putExtra(Events.TITLE, eventsMap.get(itemPosition).title);
 	        		intent.putExtra(Events.EVENT_LOCATION, eventsMap.get(itemPosition).location);
-	        		intent.putExtra(Events.DESCRIPTION, "Event Description");
-	        		// Setting dates
+	        		
 	        		GregorianCalendar calDate = new GregorianCalendar(2012, 10, 02);
 	        		intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
 	        		  calDate.getTimeInMillis());
-	        		intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
-	        		  calDate.getTimeInMillis());
-	        		// make it a full day event
-	        		intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
 	        		// make it a recurring Event
-	        		intent.putExtra(Events.RRULE, "FREQ=WEEKLY;COUNT=11;WKST=SU;BYDAY=TU,TH");
+	        		//intent.putExtra(Events.RRULE, "FREQ=WEEKLY;COUNT=11;WKST=SU;BYDAY=TU,TH");
 	        		// Making it private and shown as busy
 	        		intent.putExtra(Events.ACCESS_LEVEL, Events.ACCESS_PRIVATE);
 	        		intent.putExtra(Events.AVAILABILITY, Events.AVAILABILITY_BUSY); 
 	        		startActivity(intent);
-			
 			}
      }); 
 
@@ -77,31 +64,14 @@ public class EventsTab extends Fragment {
 		
 	  }
 	  
-	  public void read(HashMap<Integer, Event> eventsMap) {
-			try {
-				String pathname = "eventList";
-				File filename = new File(pathname);
-				InputStreamReader reader = new InputStreamReader(
-						new FileInputStream(filename));
-				BufferedReader br = new BufferedReader(reader);
 
-				String line = "";
-				line = br.readLine();
-				if (line != null) {
-					int caseCount = Integer.parseInt(line);
-					for (int i = 1; i <= caseCount; i++) {
-						line = br.readLine();
-						if (line != null) {
-							String[] input = line.split(";");
-							Event e=new Event(input[0],input[1], input[2]);
-							eventsMap.put(i-1, e);
-							//out.write(output + "\r\n"); // \r\n
-						}
-					}
-					br.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+	public void addEvents(HashMap<Integer, Event> eventsMap){
+		String [] event=EventList.events.split("#");
+		for(int i=0;i<event.length&&event[i]!=null;i++){
+			String[] input = event[i].split(";");
+			Event e=new Event(input[0].trim(),input[1].trim(), input[2].trim());
+			eventsMap.put(i, e);
 		}
+		
 	}
+}

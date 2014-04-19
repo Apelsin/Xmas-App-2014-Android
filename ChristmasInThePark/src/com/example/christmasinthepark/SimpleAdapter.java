@@ -49,8 +49,8 @@ public class SimpleAdapter extends BaseAdapter {
 			   
                    holder = (ViewHolder)convertView.getTag();//取出ViewHolder对象
 		   }
-		   holder.title.setText("Title: "+this.eventsMap.get(position).title+"\nLocation: "
-		   +this.eventsMap.get(position).location+"\ntime: "+this.eventsMap.get(position).time);
+		   holder.title.setText("Event: "+this.eventsMap.get(position).title+"\nLocation: "
+		   +this.eventsMap.get(position).location+"\nTime: "+this.eventsMap.get(position).time);
 		   return view;
 		
 	}
