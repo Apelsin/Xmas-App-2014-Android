@@ -1,8 +1,10 @@
+<!-- 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,13 +26,28 @@
     <ImageView
         android:accessibilityLiveRegion="none"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="500dp"
+=======
+        android:layout_height="wrap_content"
+>>>>>>> 9a685487bf36e64183157d6454e4b71ce66e9288
         android:scaleType="fitXY"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:background="@drawable/map" />
 
+	<WebView 
+    android:id="@+id/webviewHelp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  />
 
 
 
 </LinearLayout>
-</ScrollView>
+ </ScrollView> 
+-->
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webviewHelp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  />
