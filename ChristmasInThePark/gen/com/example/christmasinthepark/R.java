@@ -23,28 +23,41 @@ public final class R {
     public static final class drawable {
         public static final int about=0x7f020000;
         public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int map=0x7f020003;
+        public static final int snow=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f080003;
+        public static final int action_settings=0x7f080007;
         public static final int button1=0x7f080000;
-        public static final int fragment_container=0x7f080001;
-        public static final int tabtextview=0x7f080002;
+        public static final int fragment_container=0x7f080002;
+        public static final int listView=0x7f080003;
+        public static final int pdf=0x7f080005;
+        public static final int sponsor=0x7f080001;
+        public static final int tabtextview=0x7f080006;
+        public static final int text1=0x7f080004;
     }
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_tab_test=0x7f030002;
-        public static final int tab=0x7f030003;
+        public static final int events=0x7f030003;
+        public static final int list=0x7f030004;
+        public static final int map=0x7f030005;
+        public static final int tab=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f070000;
     }
     public static final class string {
-        public static final int AboutUs=0x7f050006;
+        public static final int AboutUs=0x7f050007;
+        public static final int Contact=0x7f050009;
+        public static final int EventAdd=0x7f050004;
         public static final int Events=0x7f050003;
-        public static final int Introduction=0x7f050007;
-        public static final int Map=0x7f050004;
-        public static final int Vote=0x7f050005;
+        public static final int Introduction=0x7f050008;
+        public static final int Map=0x7f050005;
+        public static final int Sponsor=0x7f05000a;
+        public static final int Vote=0x7f050006;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
