@@ -25,18 +25,10 @@ public class EventsTab extends Fragment {
 	  public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	                           Bundle savedInstanceState){
 		View view = inflater.inflate(R.layout.events, container, false);
-
 		final ListView listView = (ListView) view.findViewById(R.id.listView);
-		/*eventsMap.put(0, new Event("Event 1 Title", "Location 1","time"));
-		eventsMap.put(1, new Event("Event 2 Title", "Location 2","time"));
-		eventsMap.put(2, new Event("Event 3 Title", "Location 3","time"));
-		eventsMap.put(3, new Event("Event 4 Title", "Location 4","time"));
-		eventsMap.put(4, new Event("Event 5 Title", "Location 5","time"));
-		eventsMap.put(5, new Event("Event 6 Title", "Location 6","time"));*/
 		addEvents(eventsMap);
 		
 		 listView.setOnItemClickListener(new OnItemClickListener() {
-			 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
@@ -45,8 +37,13 @@ public class EventsTab extends Fragment {
 	        		intent.setType("vnd.android.cursor.item/event");
 	        		intent.putExtra(Events.TITLE, eventsMap.get(itemPosition).title);
 	        		intent.putExtra(Events.EVENT_LOCATION, eventsMap.get(itemPosition).location);
-	        		
-	        		GregorianCalendar calDate = new GregorianCalendar(2012, 10, 02);
+	        		String t=eventsMap.get(itemPosition).time;
+	        		String []tt=t.split(",");
+	        		String [] day =tt[0].split("/");
+	        		String [] time =tt[1].split(":");
+	        		GregorianCalendar calDate = new GregorianCalendar(Integer.parseInt(day[2].trim()), 
+	        				Integer.parseInt(day[0].trim()), Integer.parseInt(day[1].trim())
+	        				,Integer.parseInt(time[0].trim()), Integer.parseInt(time[1].trim()));
 	        		intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
 	        		  calDate.getTimeInMillis());
 	        		// make it a recurring Event
@@ -66,7 +63,7 @@ public class EventsTab extends Fragment {
 	  
 
 	public void addEvents(HashMap<Integer, Event> eventsMap){
-		String [] event=EventList.events.split("#");
+		String [] event=Event.events.split("#");
 		for(int i=0;i<event.length&&event[i]!=null;i++){
 			String[] input = event[i].split(";");
 			Event e=new Event(input[0].trim(),input[1].trim(), input[2].trim());
