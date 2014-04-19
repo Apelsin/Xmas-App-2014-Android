@@ -1,4 +1,3 @@
 INDEX VERSION 1.126+/Users/sir/Documents/androidspace/.metadata/.plugins/org.eclipse.jdt.core
-1345548466.index
 4096137436.index
 1542256292.index
