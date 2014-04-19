@@ -24,7 +24,7 @@
     <ImageView
         android:accessibilityLiveRegion="none"
         android:layout_width="fill_parent"
-        android:layout_height="650dp"
+        android:layout_height="300dp"
         android:scaleType="fitXY"
         android:layout_gravity="center"
         android:background="@drawable/map" />

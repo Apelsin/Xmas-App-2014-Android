@@ -21,6 +21,16 @@ public class AboutUsTab extends Fragment {
                 startActivity(browserIntent);
             }
         });
+        
+        final TextView phone = (TextView) view.findViewById(R.id.phone);
+        phone.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent callIntent = new Intent(Intent.ACTION_CALL);
+            	callIntent.setData(Uri.parse("tel:4082003800"));
+            	callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+            	startActivity(callIntent);
+            }
+        });
 //		TextView textview = (TextView) view.findViewById(R.id.tabtextview);
 //		textview.setText(R.string.AboutUs);
 		return view;

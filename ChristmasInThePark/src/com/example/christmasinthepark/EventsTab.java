@@ -24,22 +24,22 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class EventsTab extends Fragment {
-	final static public HashMap<Integer, Event> eventsMap = new HashMap<Integer, Event>();
+	final  public HashMap<Integer, Event> eventsMap = new HashMap<Integer, Event>();
 	  public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	                           Bundle savedInstanceState){
 		View view = inflater.inflate(R.layout.events, container, false);
 
 		final ListView listView = (ListView) view.findViewById(R.id.listView);
-		eventsMap.put(0, new Event("Event 1 Title", "Location 1"));
-		eventsMap.put(1, new Event("Event 2 Title", "Location 2"));
-		eventsMap.put(2, new Event("Event 3 Title", "Location 3"));
-		eventsMap.put(3, new Event("Event 4 Title", "Location 4"));
+		eventsMap.put(0, new Event("Event 1 Title", "Location 1","time"));
+		eventsMap.put(1, new Event("Event 2 Title", "Location 2","time"));
+		eventsMap.put(2, new Event("Event 3 Title", "Location 3","time"));
+		eventsMap.put(3, new Event("Event 4 Title", "Location 4","time"));
+		eventsMap.put(4, new Event("Event 5 Title", "Location 5","time"));
+		eventsMap.put(5, new Event("Event 6 Title", "Location 6","time"));
+		//read(eventsMap);
 		
 		 listView.setOnItemClickListener(new OnItemClickListener() {
 			 
-            // public void onItemClick(SimpleAdapter<?> parent, View view,int position, long id) {
-               
-
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
@@ -77,7 +77,7 @@ public class EventsTab extends Fragment {
 		
 	  }
 	  
-	  public static void read() {
+	  public void read(HashMap<Integer, Event> eventsMap) {
 			try {
 				String pathname = "eventList";
 				File filename = new File(pathname);
@@ -93,7 +93,7 @@ public class EventsTab extends Fragment {
 						line = br.readLine();
 						if (line != null) {
 							String[] input = line.split(";");
-							Event e=new Event(input[0],input[1]);
+							Event e=new Event(input[0],input[1], input[2]);
 							eventsMap.put(i-1, e);
 							//out.write(output + "\r\n"); // \r\n
 						}
