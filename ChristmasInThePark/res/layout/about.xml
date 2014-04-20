@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="Info: (408) 200-3800"
+        android:textColor="@color/blue"
         android:textSize="16sp" />
     
     <TextView
