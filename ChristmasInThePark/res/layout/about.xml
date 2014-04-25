@@ -48,7 +48,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Info: (408) 200-3800"
         android:textColor="@color/blue"
         android:textSize="16sp" />
     
@@ -60,6 +59,13 @@
         android:text="@string/office"
         android:textSize="16sp" />
     
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp" />
     
     <TextView
         android:layout_width="fill_parent"
