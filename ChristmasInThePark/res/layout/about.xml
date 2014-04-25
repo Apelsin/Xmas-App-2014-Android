@@ -26,13 +26,13 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:text="@string/Introduction"
-        android:textSize="21sp" />
+        android:textSize="18sp" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="Contact Us"
-        android:textSize="21sp" 
+        android:textSize="18sp" 
         android:textStyle="bold" />
     
     <TextView

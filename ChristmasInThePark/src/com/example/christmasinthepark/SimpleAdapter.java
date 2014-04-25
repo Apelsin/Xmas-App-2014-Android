@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import android.app.Activity;
 import android.provider.CalendarContract.Events;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,17 +41,16 @@ public class SimpleAdapter extends BaseAdapter {
 		   if (view == null) {// otherwise create a new one
 			   holder = new ViewHolder();
 			   view =LayoutInflater.from(context).inflate(R.layout.list, null);//LayoutInflater.inflate(context, R.layout.list, parent);
-			   System.out.println(view);
 			   holder.title = (TextView)view.findViewById(R.id.text1);
 		  view.setTag(holder);
-		  // t.setText(R.string.AboutUs);
-		   System.out.println(position+"layout is null");
 		   }else{
 			   
                    holder = (ViewHolder)convertView.getTag();//取出ViewHolder对象
 		   }
-		   holder.title.setText("Event: "+this.eventsMap.get(position).title+"\nLocation: "
-		   +this.eventsMap.get(position).location+"\nTime: "+this.eventsMap.get(position).time);
+		   String text ="<b>Event</b>: "+this.eventsMap.get(position).title+"<br><b>Location</b>: "
+				   +this.eventsMap.get(position).location+"<br><b>Time</b>: "+this.eventsMap.get(position).time;
+				   
+		   holder.title.setText(Html.fromHtml(text));
 		   return view;
 		
 	}

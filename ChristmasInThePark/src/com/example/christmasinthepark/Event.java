@@ -11,18 +11,16 @@ public class Event {
 	}
 	
 	
-	
 	public static String events = 
 			
-			"Event 1 Title;   Location 2;     12/20/2014, 10:30"+
-			"#Event 2 Title;   Location 2;    12/20/2014, 12:30"   + 
-			"#Event 3 Title;   Location 3;    12/20/2014, 10:30"   +
+			"Fun in the Summer;   Christmas in the Park;     6/25/2014, 17:30"+
+			"#Christmas in July;   Circle of Palms, Santa's Ho-Ho-Ho-Down!;    7/19/2014, 17:30"   + 
+			"#A Nightmare Before Christmas in the Park;   Christmas in the Park warehouse;    10/25/2014, 19:00"   +
 			"#Event 4 Title;   Location 4;    12/20/2014, 10:30"   +
 			"#Event 5 Title;   Location 5;    12/20/2014, 10:30"   +
 			"#Event 6 Title;   Location 6;    12/20/2014, 10:30"   +
 			
-			//Add new events here like the previous line
+			//Add new events here like the previous line:   #title; location; time
 			
 			"";
-
 }
