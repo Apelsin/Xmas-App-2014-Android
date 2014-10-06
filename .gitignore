@@ -6,6 +6,9 @@
 *.user
 *.sln.docstates
 
+# Additional user-specific files
+*.userprefs
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
