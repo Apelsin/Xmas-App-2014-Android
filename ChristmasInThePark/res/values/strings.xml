@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Christmas In The Park</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Events">Events</string>
+    <string name="EventAdd">Click on item to add to your Calendar</string>
+    <string name="Map">Map</string>
+    <string name="Vote">Vote</string>
+    <string name="AboutUs">About Us</string>
+    <string name="Introduction">\nChristmas in the Park is an annual holiday tradition that takes place in the heart of Downtown San José at the Plaza de Cesar Chavez. For over 30 years, this whimsical event has brought people from all over the Bay Area together during the holidays. \n\nChristmas in the Park is a non-profit organization that is supported through fundraising efforts and is free to the public. Children can have their photograph taken with Santa, watch nightly entertainment and enjoy holiday themed refreshments.</string>
+    <string name="Contact">\nExecutive Director: Jason Minsky\nExhibit Designer: Tom Trafton\nProgram Manager: Shelley Romeo</string>
+    <string name="office">Office: 1(408)297 XMAS (9627)\nFax: 1(408) 516 9792\n\nAddress:\nChristmas in the Park\n101 West Santa Clara Street\nSan Jose, CA 95113\n</string>
+    <string name="Sponsor">\nIf you are interested in becoming a sponsor please tell us about yourself. Send us an email with your contact information and a brief message and someone will contact you with more information.</string>
+
+</resources>

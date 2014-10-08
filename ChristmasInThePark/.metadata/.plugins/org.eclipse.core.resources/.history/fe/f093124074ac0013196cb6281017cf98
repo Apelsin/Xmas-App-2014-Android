@@ -1,0 +1,33 @@
+package com.example.christmasinthepark;
+
+import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+public class MyTabListener implements ActionBar.TabListener {
+	Fragment fragment;
+	
+	public MyTabListener(Fragment fragment) {
+		this.fragment = fragment;
+	}
+	
+    public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		ft.replace(R.id.fragment_container, fragment);
+		LayoutInflater inflater = LayoutInflater.from(R.id.fragment_container); // 1
+		View theInflatedView = inflater.inflate(R.layout.about, null);
+		//View view = LayoutInflater.inflate(R.layout.about,fragment , false);
+		//TextView textview = (TextView) view.findViewById(R.id.tabtextview);
+	}
+	
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		ft.remove(fragment);
+	}
+	
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		// nothing done here
+	}
+}
