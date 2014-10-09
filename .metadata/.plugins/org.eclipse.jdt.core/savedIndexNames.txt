@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+C:\code\xmas-app\.metadata\.plugins\org.eclipse.jdt.core
-1792548769.index
-3641891202.index
