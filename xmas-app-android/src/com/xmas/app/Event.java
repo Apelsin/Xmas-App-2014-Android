@@ -1,4 +1,4 @@
-package com.example.christmasinthepark;
+package com.xmas.app;
 
 public class Event {
 	public String title = "";

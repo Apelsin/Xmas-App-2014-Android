@@ -1,4 +1,4 @@
-package com.example.christmasinthepark;
+package com.xmas.app;
 
 import android.os.Bundle;
 import android.app.ActionBar;

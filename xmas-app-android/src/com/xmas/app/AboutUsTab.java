@@ -1,4 +1,4 @@
-package com.example.christmasinthepark;
+package com.xmas.app;
 
 import android.app.Fragment;
 import android.content.Intent;
