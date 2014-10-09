@@ -13,7 +13,7 @@ namespace xmas_app
     {
         Page TabEvents = new EventSchedule() { Title = "Events", };
         Page TabInfo = new Page() { Title = "Info" };
-        Page TabParkMap = new Page() { Title = "Map" };
+        Page TabParkMap = new ParkMap() { Title = "Map" };
         Page TabAbout = new Page() { Title = "About" };
         IEnumerable<Page> AllTabs()
         {

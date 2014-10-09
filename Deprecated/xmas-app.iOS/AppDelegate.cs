@@ -5,8 +5,6 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-using Xamarin.Forms;
-
 namespace xmas_app.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -27,12 +25,13 @@ namespace xmas_app.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.Init();
-
+            // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            window.RootViewController = App.GetMainPage().CreateViewController();
+            // If you have defined a view, add it here:
+            // window.RootViewController  = navigationController;
 
+            // make the window visible
             window.MakeKeyAndVisible();
 
             return true;
