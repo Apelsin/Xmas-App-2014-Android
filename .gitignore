@@ -1,0 +1,7 @@
+# Base gitignore with universal ignores
+
+# Eclipse workspace
+.metadata
+
+# Misc
+.DS_Store
