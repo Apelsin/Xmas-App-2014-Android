@@ -28,20 +28,21 @@ public final class R {
         public static final int about=0x7f020000;
         public static final int border_listview=0x7f020001;
         public static final int ezgif=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int logo=0x7f020004;
-        public static final int map=0x7f020005;
-        public static final int snow=0x7f020006;
+        public static final int facebookicon=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int logo=0x7f020005;
+        public static final int map=0x7f020006;
+        public static final int snow=0x7f020007;
     }
     public static final class id {
         public static final int action_settings=0x7f090009;
         public static final int button1=0x7f090002;
         public static final int email=0x7f090001;
+        public static final int facebook=0x7f090008;
         public static final int fragment_container=0x7f090003;
         public static final int listView=0x7f090005;
         public static final int phone=0x7f090000;
         public static final int sponsor=0x7f090004;
-        public static final int tabtextview=0x7f090008;
         public static final int text1=0x7f090006;
         public static final int webviewHelp=0x7f090007;
     }

@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class MapTab extends Fragment {
 	  public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	                           Bundle savedInstanceState){
+		
 		View view = inflater.inflate(R.layout.map, container, false);
 //		TextView textview = (TextView) view.findViewById(R.id.tabtextview);
 //		textview.setText(R.string.Map);
