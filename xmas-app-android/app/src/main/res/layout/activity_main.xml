@@ -6,11 +6,54 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:text="Color"
+        android:id="@+id/button"
+        android:layout_marginTop="109dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/buttonStyle"/>
+    <Button
+
+        android:text="Color"
+        android:id="@+id/1"
+        android:layout_alignTop="@+id/5"
+        android:layout_toRightOf="@+id/5"
+        android:layout_toEndOf="@+id/5"
+        style="@style/buttonStyle"
+        />
+    <Button
+        android:text="Color"
+        android:id="@+id/2"
+        android:layout_marginTop="34dp"
+        android:height="100dp"
+        android:width="50dp"
+        android:layout_below="@+id/button"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        style="@style/buttonStyle"/>
+    <Button
+        android:text="Color"
+        android:id="@+id/3"
+        android:layout_marginTop="109dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/buttonStyle"/>
+    <Button
+        android:text="Color"
+        android:id="@+id/4"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/5"
+        android:layout_toStartOf="@+id/5"
+        style="@style/buttonStyle"/>
+    <Button
+        android:text="Color"
+        android:id="@+id/5"
+        android:layout_alignTop="@+id/2"
+        android:layout_centerHorizontal="true"
+        style="@style/buttonStyle"/>
 
 </RelativeLayout>
