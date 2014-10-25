@@ -1,4 +1,4 @@
-package com.example.christmasinthepark.christmasinthepark;
+package com.xmas_app.xmas_app_android;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
