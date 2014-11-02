@@ -15,19 +15,19 @@
         android:layout_marginTop="109dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        style="@style/buttonStyle"/>
+        style="@style/buttonStyle" />
     <Button
 
         android:text="Color"
-        android:id="@+id/1"
-        android:layout_alignTop="@+id/5"
-        android:layout_toRightOf="@+id/5"
-        android:layout_toEndOf="@+id/5"
+        android:id="@+id/button1"
+        android:layout_alignTop="@+id/button5"
+        android:layout_toRightOf="@+id/button5"
+        android:layout_toEndOf="@+id/button5"
         style="@style/buttonStyle"
         />
     <Button
         android:text="Color"
-        android:id="@+id/2"
+        android:id="@+id/button2"
         android:layout_marginTop="34dp"
         android:height="100dp"
         android:width="50dp"
@@ -37,22 +37,22 @@
         style="@style/buttonStyle"/>
     <Button
         android:text="Color"
-        android:id="@+id/3"
+        android:id="@+id/button3"
         android:layout_marginTop="109dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         style="@style/buttonStyle"/>
     <Button
         android:text="Color"
-        android:id="@+id/4"
+        android:id="@+id/button4"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/5"
-        android:layout_toStartOf="@+id/5"
+        android:layout_toLeftOf="@+id/button5"
+        android:layout_toStartOf="@+id/button5"
         style="@style/buttonStyle"/>
     <Button
         android:text="Color"
-        android:id="@+id/5"
-        android:layout_alignTop="@+id/2"
+        android:id="@+id/button5"
+        android:layout_alignTop="@+id/button2"
         android:layout_centerHorizontal="true"
         style="@style/buttonStyle"/>
 
