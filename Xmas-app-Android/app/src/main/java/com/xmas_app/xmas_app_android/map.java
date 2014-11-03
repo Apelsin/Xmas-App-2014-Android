@@ -1,28 +1,24 @@
 package com.xmas_app.xmas_app_android;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.webkit.WebView;
 
 
-public class MainActivity extends Activity {
+public class map extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button parkMap = (Button)this.findViewById(R.id.map);
-        parkMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,map.class);
-                startActivity(i);
-            }
-        });
+        setContentView(R.layout.activity_map);
+        //WebView views = (WebView)findViewById(R.id.showWeb);
+        //views.getSettings().setBuiltInZoomControls(true);
+        //views.loadUrl("file:///android_asset/htmltest.html");
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

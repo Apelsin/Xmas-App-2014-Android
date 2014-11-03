@@ -10,50 +10,52 @@
     tools:context=".MainActivity">
 
     <Button
-        android:text="Color"
-        android:id="@+id/button"
-        android:layout_marginTop="109dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        style="@style/buttonStyle" />
-    <Button
-
-        android:text="Color"
-        android:id="@+id/button1"
-        android:layout_alignTop="@+id/button5"
-        android:layout_toRightOf="@+id/button5"
-        android:layout_toEndOf="@+id/button5"
+        android:text="Vote"
+        android:id="@+id/vote"
         style="@style/buttonStyle"
-        />
+        android:layout_toLeftOf="@+id/involved"
+        android:layout_alignTop="@+id/sponsors"
+        android:layout_alignRight="@+id/involved"
+        android:layout_alignEnd="@+id/involved"
+        android:layout_marginRight="56dp" />
+
     <Button
-        android:text="Color"
-        android:id="@+id/button2"
-        android:layout_marginTop="34dp"
-        android:height="100dp"
-        android:width="50dp"
-        android:layout_below="@+id/button"
-        android:layout_toLeftOf="@+id/button"
-        android:layout_toStartOf="@+id/button"
-        style="@style/buttonStyle"/>
+        android:text="Sponsors"
+        android:id="@+id/sponsors"
+        style="@style/buttonStyle"
+        android:layout_toRightOf="@+id/vote"
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/involved"
+        android:layout_alignStart="@+id/involved" />
     <Button
-        android:text="Color"
-        android:id="@+id/button3"
-        android:layout_marginTop="109dp"
+        android:text="Get Involved"
+        android:id="@+id/involved"
+        style="@style/buttonStyle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        style="@style/buttonStyle"/>
+        android:layout_marginTop="60dp" />
     <Button
-        android:text="Color"
-        android:id="@+id/button4"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button5"
-        android:layout_toStartOf="@+id/button5"
-        style="@style/buttonStyle"/>
+        android:text="Event Schedule"
+        android:id="@+id/schedule"
+        style="@style/buttonStyle"
+        android:layout_below="@+id/vote"
+        android:layout_toLeftOf="@+id/sponsors"
+        android:layout_toStartOf="@+id/sponsors" />
     <Button
-        android:text="Color"
-        android:id="@+id/button5"
-        android:layout_alignTop="@+id/button2"
-        android:layout_centerHorizontal="true"
-        style="@style/buttonStyle"/>
+        android:text="Vistor Info"
+        android:id="@+id/info"
+        style="@style/buttonStyle"
+        android:layout_below="@+id/vote"
+        android:layout_toRightOf="@+id/schedule"
+        android:layout_toEndOf="@+id/schedule" />
+    <Button
+        android:text="Park Map"
+        android:id="@+id/map"
+        style="@style/buttonStyle"
+        android:layout_below="@+id/sponsors"
+        android:layout_toRightOf="@+id/vote"
+        android:layout_toEndOf="@+id/vote" />
+
 
 </RelativeLayout>
