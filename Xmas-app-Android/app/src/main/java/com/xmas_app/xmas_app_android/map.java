@@ -14,9 +14,9 @@ public class map extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        //WebView views = (WebView)findViewById(R.id.showWeb);
-        //views.getSettings().setBuiltInZoomControls(true);
-        //views.loadUrl("file:///android_asset/htmltest.html");
+        WebView views = (WebView)findViewById(R.id.showWeb);
+        views.getSettings().setBuiltInZoomControls(true);
+        views.loadUrl("www.google.com");
     }
 
 
