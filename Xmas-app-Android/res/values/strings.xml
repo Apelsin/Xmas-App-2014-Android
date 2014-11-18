@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">xmas-app</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_map">Park Map</string>
+    <string name="title_activity_event_schedule">EventSchedule</string>
+    <string name="title_activity_vistor_info">Vistor Info</string>
+    <string name="title_activity_get_involved">Get Involved</string>
+    <string name="title_activity_sponsors">Sponsors</string>
+    <string name="title_activity_vote">Vote</string>
+
+</resources>
