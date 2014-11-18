@@ -1,0 +1,136 @@
+html, body
+{
+    font-family: sans-serif;
+    color: #222233;
+    line-height: 1.5em;
+}
+
+.zero-margin
+{
+    margin: 0;
+}
+
+a
+{
+    text-decoration: inherit;
+}
+
+a:link
+{
+    color: #FF5555;
+}
+
+a:visited
+{
+    color: #773333;
+}
+
+.fill
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.blur-me
+{
+    /*
+    -webkit-perspective:1000;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform: translateZ(0);
+    */
+
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    bottom: inherit;
+    margin: -1em;
+    -webkit-filter: blur(12px);
+}
+
+.blur-container
+{
+    overflow: hidden;
+}
+
+.snowy
+{
+    background-image: url('../img/nice_snow.png');
+    color: #222233;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 2)
+{
+    .snowy
+    {
+        background-image: url('../img/nice_snow_@2x.png');
+    }
+}
+
+.candy-cane>:nth-child(even),
+.candy-cane>:nth-child(even) :link,
+.candy-cane>:nth-child(even) :visited
+{
+    color: #FFF;
+    text-shadow:  0px 0px 24px rgba(255,0,0,0.5), 0px 0px 6px rgba(128,0,0,0.5), 0px 0px 3px rgba(128,0,0,0.5);
+}
+.candy-cane>:nth-child(even) .blur-me
+{
+    background-image: url('../img/nice_snow_pink.png');
+}
+
+.candy-cane>:nth-child(odd),
+.candy-cane>:nth-child(odd) :link,
+.candy-cane>:nth-child(odd) :visited
+{
+    color: #F66;
+    text-shadow:  0px 0px 24px #FFF, 0px 0px 12px #FFF, 0px 0px 6px #FFF, 0px 0px 3px #FFF, 0px 0px 3px #FFF;
+
+}
+.candy-cane>:nth-child(odd) .blur-me
+{
+    background-image: url('../img/nice_snow_gray.png');
+}
+
+@media screen and (-webkit-device-pixel-ratio: 2)
+{
+    .candy-cane>:nth-child(even) .blur-me
+    {
+        background-image: url('../img/nice_snow_pink_@2x.png');
+    }
+    .candy-cane>:nth-child(odd) .blur-me
+    {
+        background-image: url('../img/nice_snow_gray_@2x.png');
+    }
+}
+
+.gloss
+{
+    border: 1 solid #fff;
+    border-bottom-color: #999;
+}
+
+.gloss:before,
+.gloss:after
+{
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 1px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#999));
+    background-image: -webkit-linear-gradient(#fff, #999);
+    background-image: -moz-linear-gradient(#fff, #999);
+    background-image: -o-linear-gradient(#fff, #999);
+    background-image: linear-gradient(#fff, #999);
+}
+
+.gloss:after
+{
+    left: auto;
+    right: -1px;
+}

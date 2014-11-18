@@ -55,28 +55,37 @@
             android:name=".GetInvolved"
             android:label="@string/title_activity_get_involved" >
             <intent-filter>
-	            <action android:name="android.intent.action.GETINVOLVED" />
-	
-	            <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.GETINVOLVED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Sponsors"
             android:label="@string/title_activity_sponsors" >
-	            <intent-filter>
-	                <action android:name="android.intent.action.SPONSORS" />
-	
-	                <category android:name="android.intent.category.DEFAULT" />
-                </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SPONSORS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Vote"
             android:label="@string/title_activity_vote" >
-                <intent-filter>
-	                <action android:name="android.intent.action.VOTE" />
-	
-	                <category android:name="android.intent.category.DEFAULT" />
-                </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VOTE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Donation"
+            android:label="@string/title_activity_donation" >
+            <intent-filter>
+                <action android:name="android.intent.action.DONATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

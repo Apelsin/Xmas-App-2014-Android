@@ -17,12 +17,21 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 	<style name="buttonStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/redornament</item>
-        <item name="android:width">80sp</item>
-        <item name="android:height">100sp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:background">@drawable/redornamentlarge</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
         <item name="android:textColor">#FFCC66</item>
-		 <item name="android:textSize">26sp</item>
+		 <item name="android:textSize">18sp</item>
+    </style>
+    <style name="greenbuttonStyle">
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:background">@drawable/greenornamentlarge</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:textColor">#FFCC66</item>
+		 <item name="android:textSize">18sp</item>
     </style>
 </resources>

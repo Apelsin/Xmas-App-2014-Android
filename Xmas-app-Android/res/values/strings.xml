@@ -9,5 +9,8 @@
     <string name="title_activity_get_involved">Get Involved</string>
     <string name="title_activity_sponsors">Sponsors</string>
     <string name="title_activity_vote">Vote</string>
+    <string name="title_activity_donation">Donation</string>
+    <string name="parking">Parking &amp; Directions</string>
+    <string name="eats">Eats &amp; Treats</string>
 
 </resources>

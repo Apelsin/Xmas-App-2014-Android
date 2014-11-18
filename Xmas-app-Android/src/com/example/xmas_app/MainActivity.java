@@ -3,6 +3,7 @@ package com.example.xmas_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +14,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class MainActivity extends Activity {
-	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor;
+	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor,donation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,7 @@ public class MainActivity extends Activity {
         sponsor = (Button) findViewById(R.id.sponsors);
         eventschedule = (Button) findViewById(R.id.schedule);
         vistor = (Button) findViewById(R.id.info);
-        
+        donation = (Button)findViewById(R.id.donationButton);
         
         //initial for font
         String fontPath = "font.ttf";
@@ -109,6 +110,16 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent("android.intent.action.VISTORINFO");
 				startActivity(intent);
+			}
+		});
+    	donation.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PNSZ7WHRJ333W");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
     }
