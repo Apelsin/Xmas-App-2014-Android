@@ -89,7 +89,8 @@
 				        android1:layout_alignParentTop="true"
 				        android1:layout_centerHorizontal="true"
 				        android1:layout_marginTop="92dp"
-				        android1:text="Get Involved" />
+				        android1:text="Get Involved"
+				        android1:textStyle="bold" />
 
 				    <Button
 				        android1:id="@+id/donationButton"
@@ -109,7 +110,7 @@
                     android1:layout_width="match_parent"
                     android1:layout_height="match_parent" >
                     <WebView
-				        android:id="@+id/webView"
+				        android:id="@+id/AboutUswebView"
 				        android:layout_width="match_parent"
 				        android:layout_height="match_parent" />
                 </LinearLayout>

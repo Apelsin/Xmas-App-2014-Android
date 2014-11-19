@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">xmas-app</string>
+    <string name="app_name">Christmas in the Park</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_map">Park Map</string>
-    <string name="title_activity_event_schedule">EventSchedule</string>
-    <string name="title_activity_vistor_info">Vistor Info</string>
+    <string name="title_activity_event_schedule">Event Schedule</string>
+    <string name="title_activity_vistor_info">Visitor Info</string>
     <string name="title_activity_get_involved">Get Involved</string>
     <string name="title_activity_sponsors">Sponsors</string>
     <string name="title_activity_vote">Vote</string>
     <string name="title_activity_donation">Donation</string>
-    <string name="parking">Parking &amp; Directions</string>
-    <string name="eats">Eats &amp; Treats</string>
+    <string name="parking">Parking&amp;  Direction</string>
+    <string name="eats">Eats&amp; Treats</string>
+    <string name="title_activity_faqs">FAQs</string>
+    <string name="title_activity_parkingdirection">Parking&amp; Direction</string>
 
 </resources>

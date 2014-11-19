@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VistorInfo"
+            android:name=".VisitorInfo"
             android:label="@string/title_activity_vistor_info" >
             <intent-filter>
                 <action android:name="android.intent.action.VISTORINFO" />
@@ -79,10 +79,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Donation"
-            android:label="@string/title_activity_donation" >
+            android:name=".FAQS"
+            android:label="@string/title_activity_faqs" >
             <intent-filter>
-                <action android:name="android.intent.action.DONATION" />
+                <action android:name="android.intent.action.FAQS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Parkingdirection"
+            android:label="@string/title_activity_parkingdirection" >
+            <intent-filter>
+                <action android:name="android.intent.action.PARKINGDIRECTION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

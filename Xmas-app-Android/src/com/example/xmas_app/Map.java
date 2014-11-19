@@ -18,6 +18,6 @@ public class Map extends Activity {
 		WebView mapView = (WebView) findViewById(R.id.mapView);
 		mapView.getSettings().setJavaScriptEnabled(true);
 		mapView.getSettings().setBuiltInZoomControls(true);
-		mapView.loadUrl("file:///android_asset/htmltest.html");
+		mapView.loadUrl("file:///android_asset/html/park-map.html");
 		}
 }

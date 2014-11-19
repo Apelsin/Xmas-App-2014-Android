@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -21,6 +22,13 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         initial();
         initialOnclick();
+        
+        //setup about us tab
+        WebView aboutusView = (WebView) findViewById(R.id.AboutUswebView);
+        aboutusView.getSettings().setJavaScriptEnabled(true);
+        aboutusView.getSettings().setBuiltInZoomControls(true);
+        aboutusView.loadUrl("file:///android_asset/html/about.html");
+        
     }
     public void initial(){
     	//initial for buttons
