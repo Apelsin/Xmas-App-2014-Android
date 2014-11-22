@@ -91,13 +91,52 @@
 				        android1:layout_marginTop="92dp"
 				        android1:text="Get Involved"
 				        android1:textStyle="bold" />
+					<Button
+				        android1:id="@+id/citpButton"
+				        android1:background= "@drawable/citp"
+				        style="@style/topbuttonStyle"
+				        android1:layout_centerHorizontal="true" />
+				    <Button
+				        android1:id="@+id/pinterestButton"
+				        style="@style/topbuttonStyle"
+				        android1:background= "@drawable/pinterest"
+				        android1:layout_alignBaseline="@+id/citpButton"
+				        android1:layout_alignBottom="@+id/citpButton"
+				        android1:layout_toRightOf="@+id/involved"/>
+
+				    <Button
+				        android1:id="@+id/youtubeButton"
+				        style="@style/topbuttonStyle"
+				        android1:layout_alignBaseline="@+id/pinterestButton"
+				        android1:layout_alignBottom="@+id/pinterestButton"
+				        android1:layout_toRightOf="@+id/pinterestButton"
+				        android1:layout_marginLeft="15dp"
+				        android1:background="@drawable/youtube" />
+
+				    <Button
+				        android1:id="@+id/twitterButton"
+				        style="@style/topbuttonStyle"
+				        android1:layout_alignBaseline="@+id/citpButton"
+				        android1:layout_alignBottom="@+id/citpButton"
+				        android1:layout_alignRight="@+id/schedule"
+				        android1:background="@drawable/twitter"/>
+
+				    <Button
+				        android1:id="@+id/facebookButton"
+				        style="@style/topbuttonStyle"
+				        android1:layout_alignBaseline="@+id/twitterButton"
+				        android1:layout_alignBottom="@+id/twitterButton"
+				        android1:layout_toLeftOf="@+id/twitterButton"
+				        android1:layout_marginRight="15dp"
+				        android1:background="@drawable/facebook" />
 
 				    <Button
 				        android1:id="@+id/donationButton"
 				        android1:layout_width="120dp"
 				        android1:layout_height="120dp"
+				        android1:layout_alignBaseline="@+id/involved"
+				        android1:layout_alignBottom="@+id/involved"
 				        android1:layout_alignParentRight="true"
-				        android1:layout_alignParentTop="true"
 				        android1:adjustViewBounds="true"
 				        android1:background="@drawable/bell"
 				        android1:scaleType="fitCenter" />

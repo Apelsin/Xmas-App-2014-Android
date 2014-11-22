@@ -13,36 +13,46 @@ public final class R {
     public static final class drawable {
         public static final int background=0x7f020000;
         public static final int bell=0x7f020001;
-        public static final int greenornament=0x7f020002;
-        public static final int greenornamentlarge=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int redornament=0x7f020005;
-        public static final int redornamentlarge=0x7f020006;
-        public static final int snowbackground=0x7f020007;
+        public static final int citp=0x7f020002;
+        public static final int facebook=0x7f020003;
+        public static final int greenornament=0x7f020004;
+        public static final int greenornamentlarge=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int pinterest=0x7f020007;
+        public static final int redornament=0x7f020008;
+        public static final int redornamentlarge=0x7f020009;
+        public static final int snowbackground=0x7f02000a;
+        public static final int twitter=0x7f02000b;
+        public static final int youtube=0x7f02000c;
     }
     public static final class id {
-        public static final int AboutUswebView=0x7f06000d;
-        public static final int EatsTreatButton=0x7f060013;
+        public static final int AboutUswebView=0x7f060012;
+        public static final int EatsTreatButton=0x7f060018;
         public static final int FAQSView=0x7f060001;
-        public static final int FAQsButton=0x7f060010;
-        public static final int ParkingButton=0x7f060011;
-        public static final int PartnerButton=0x7f060014;
-        public static final int StoresButton=0x7f060012;
+        public static final int FAQsButton=0x7f060015;
+        public static final int ParkingButton=0x7f060016;
+        public static final int PartnerButton=0x7f060019;
+        public static final int StoresButton=0x7f060017;
+        public static final int citpButton=0x7f06000c;
         public static final int donationButton=0x7f06000b;
+        public static final int facebookButton=0x7f060010;
         public static final int info=0x7f060008;
         public static final int involved=0x7f06000a;
         public static final int involvedView=0x7f060002;
         public static final int map=0x7f060009;
-        public static final int mapView=0x7f06000e;
-        public static final int parkingView=0x7f06000f;
+        public static final int mapView=0x7f060013;
+        public static final int parkingView=0x7f060014;
+        public static final int pinterestButton=0x7f06000d;
         public static final int schedule=0x7f060005;
         public static final int scheduleView=0x7f060000;
         public static final int sponsors=0x7f060007;
         public static final int tab1=0x7f060004;
-        public static final int tab2=0x7f06000c;
+        public static final int tab2=0x7f060011;
         public static final int tabhost=0x7f060003;
+        public static final int twitterButton=0x7f06000f;
         public static final int vote=0x7f060006;
-        public static final int voteView=0x7f060015;
+        public static final int voteView=0x7f06001a;
+        public static final int youtubeButton=0x7f06000e;
     }
     public static final class layout {
         public static final int activity_event_schedule=0x7f030000;
@@ -99,5 +109,6 @@ public final class R {
         public static final int AppTheme=0x7f050001;
         public static final int buttonStyle=0x7f050002;
         public static final int greenbuttonStyle=0x7f050003;
+        public static final int topbuttonStyle=0x7f050004;
     }
 }
