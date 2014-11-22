@@ -17,14 +17,15 @@ function ready()
             title = $('.title .text', e.currentTarget).text();
             where = $('.where .text', e.currentTarget).text();
             when = $('.when .text', e.currentTarget).text();
-            
+			var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+			var error = function(message) { alert("Error: " + message); };
             // Is it really wise to add this here?
             when += " 2014"; // Big assumption!!!
             when_parsed = moment(when, "MMM DD [at] hA YYYY"); // moment.js
-            
-            arguments = {title: title, where: where, when: when_parsed}
-            json_string = JSON.stringify(arguments);
-            App.Execute('app://calendar:' + json_string);
+            window.plugins.calendar.createEventInteractively(title,"","","","",success,error);
+            //arguments = {title: title, where: where, when: when_parsed}
+            //json_string = JSON.stringify(arguments);
+            //App.Execute('app://calendar:' + json_string);
             //alert(json_string);
         }
         $(element).click(click);
