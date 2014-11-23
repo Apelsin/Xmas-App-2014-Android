@@ -33,26 +33,26 @@ public final class R {
         public static final int ParkingButton=0x7f060016;
         public static final int PartnerButton=0x7f060019;
         public static final int StoresButton=0x7f060017;
-        public static final int citpButton=0x7f06000c;
-        public static final int donationButton=0x7f06000b;
-        public static final int facebookButton=0x7f060010;
+        public static final int citpButton=0x7f06000b;
+        public static final int donationButton=0x7f060010;
+        public static final int facebookButton=0x7f06000f;
         public static final int info=0x7f060008;
         public static final int involved=0x7f06000a;
         public static final int involvedView=0x7f060002;
         public static final int map=0x7f060009;
         public static final int mapView=0x7f060013;
         public static final int parkingView=0x7f060014;
-        public static final int pinterestButton=0x7f06000d;
+        public static final int pinterestButton=0x7f06000c;
         public static final int schedule=0x7f060005;
         public static final int scheduleView=0x7f060000;
         public static final int sponsors=0x7f060007;
         public static final int tab1=0x7f060004;
         public static final int tab2=0x7f060011;
         public static final int tabhost=0x7f060003;
-        public static final int twitterButton=0x7f06000f;
+        public static final int twitterButton=0x7f06000e;
         public static final int vote=0x7f060006;
         public static final int voteView=0x7f06001a;
-        public static final int youtubeButton=0x7f06000e;
+        public static final int youtubeButton=0x7f06000d;
     }
     public static final class layout {
         public static final int activity_event_schedule=0x7f030000;
