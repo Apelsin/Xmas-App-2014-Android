@@ -3,23 +3,32 @@ package com.example.xmas_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class MainActivity extends Activity {
-	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor;
+	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor,donation, mainpage, youtube, twitter, facebook,pinterest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initial();
         initialOnclick();
+        
+        //setup about us tab
+        WebView aboutusView = (WebView) findViewById(R.id.AboutUswebView);
+        aboutusView.getSettings().setJavaScriptEnabled(true);
+        aboutusView.getSettings().setBuiltInZoomControls(true);
+        aboutusView.loadUrl("file:///android_asset/html/about.html");
+        
     }
     public void initial(){
     	//initial for buttons
@@ -29,7 +38,12 @@ public class MainActivity extends Activity {
         sponsor = (Button) findViewById(R.id.sponsors);
         eventschedule = (Button) findViewById(R.id.schedule);
         vistor = (Button) findViewById(R.id.info);
-        
+        donation = (Button)findViewById(R.id.donationButton);
+        mainpage = (Button)findViewById(R.id.citpButton);
+        youtube = (Button)findViewById(R.id.youtubeButton);
+        facebook = (Button)findViewById(R.id.facebookButton);
+        pinterest = (Button)findViewById(R.id.pinterestButton);
+        twitter = (Button)findViewById(R.id.twitterButton);
         
         //initial for font
         String fontPath = "font.ttf";
@@ -109,6 +123,66 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent("android.intent.action.VISTORINFO");
 				startActivity(intent);
+			}
+		});
+    	donation.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PNSZ7WHRJ333W");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
+			}
+		});
+    	mainpage.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("http://christmasinthepark.com/");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
+			}
+		});
+    	twitter.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("https://twitter.com/christmaspark");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
+			}
+		});
+    	facebook.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("https://www.facebook.com/ChristmasintheParkSJ");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
+			}
+		});
+    	pinterest.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("http://www.pinterest.com/CITPSJ/");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
+			}
+		});
+    	youtube.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("https://www.youtube.com/user/xmasinthepark");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
     }
