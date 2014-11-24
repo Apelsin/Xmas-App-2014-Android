@@ -15,6 +15,6 @@ public class FAQS extends Activity {
 		WebView FAQView = (WebView)findViewById(R.id.FAQSView);
 		FAQView.getSettings().setJavaScriptEnabled(true);
 		FAQView.getSettings().setBuiltInZoomControls(true);
-		FAQView.loadUrl("file:///android_asset/html/faq.html");
+		FAQView.loadUrl("file:///android_asset/html/faq.html#table-of-contents");
 	}
 }

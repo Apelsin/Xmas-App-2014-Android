@@ -11,19 +11,22 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int background=0x7f020000;
-        public static final int bell=0x7f020001;
-        public static final int citp=0x7f020002;
-        public static final int facebook=0x7f020003;
-        public static final int greenornament=0x7f020004;
-        public static final int greenornamentlarge=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int pinterest=0x7f020007;
-        public static final int redornament=0x7f020008;
-        public static final int redornamentlarge=0x7f020009;
-        public static final int snowbackground=0x7f02000a;
-        public static final int twitter=0x7f02000b;
-        public static final int youtube=0x7f02000c;
+        public static final int abouttab=0x7f020000;
+        public static final int background=0x7f020001;
+        public static final int bell=0x7f020002;
+        public static final int citp=0x7f020003;
+        public static final int desktop=0x7f020004;
+        public static final int facebook=0x7f020005;
+        public static final int greenornament=0x7f020006;
+        public static final int greenornamentlarge=0x7f020007;
+        public static final int hometab=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int pinterest=0x7f02000a;
+        public static final int redornament=0x7f02000b;
+        public static final int redornamentlarge=0x7f02000c;
+        public static final int snowbackground=0x7f02000d;
+        public static final int twitter=0x7f02000e;
+        public static final int youtube=0x7f02000f;
     }
     public static final class id {
         public static final int AboutUswebView=0x7f060012;

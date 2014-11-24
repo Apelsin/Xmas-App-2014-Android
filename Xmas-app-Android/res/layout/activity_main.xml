@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    
     tools:context="${packageName}.${activityClass}" >
 			
     
@@ -33,9 +34,10 @@
 
                 <RelativeLayout
                     android:id="@+id/tab1"
+    				android:background="@drawable/background"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/background"
+                    
                     android:orientation="vertical" >
 				    <Button
 				        android:text="Event Schedule"
@@ -82,27 +84,11 @@
 				        android1:layout_marginLeft="40dp"
 				        android1:text="Sponsors"
 				        android1:textStyle="bold" />
-
-				    <Button
-				        android1:id="@+id/involved"
-				        style="@style/buttonStyle"
-				        android1:layout_alignParentTop="true"
-				        android1:layout_centerHorizontal="true"
-				        android1:layout_marginTop="92dp"
-				        android1:text="Get Involved"
-				        android1:textStyle="bold" />
 					<Button
 				        android1:id="@+id/citpButton"
 				        android1:background= "@drawable/citp"
 				        style="@style/topbuttonStyle"
 				        android1:layout_centerHorizontal="true" />
-				    <Button
-				        android1:id="@+id/pinterestButton"
-				        style="@style/topbuttonStyle"
-				        android1:background= "@drawable/pinterest"
-				        android1:layout_alignBaseline="@+id/citpButton"
-				        android1:layout_alignBottom="@+id/citpButton"
-				        android1:layout_toRightOf="@+id/involved"/>
 
 				    <Button
 				        android1:id="@+id/youtubeButton"
@@ -110,7 +96,7 @@
 				        android1:layout_alignBaseline="@+id/pinterestButton"
 				        android1:layout_alignBottom="@+id/pinterestButton"
 				        android1:layout_toRightOf="@+id/pinterestButton"
-				        android1:layout_marginLeft="15dp"
+				        android1:layout_marginLeft="5dp"
 				        android1:background="@drawable/youtube" />
 
 				    <Button
@@ -118,7 +104,8 @@
 				        style="@style/topbuttonStyle"
 				        android1:layout_alignBaseline="@+id/citpButton"
 				        android1:layout_alignBottom="@+id/citpButton"
-				        android1:layout_alignRight="@+id/schedule"
+				        android1:layout_toLeftOf="@+id/citpButton"
+				        android1:layout_marginRight="5dp"
 				        android1:background="@drawable/twitter"/>
 
 				    <Button
@@ -127,19 +114,35 @@
 				        android1:layout_alignBaseline="@+id/twitterButton"
 				        android1:layout_alignBottom="@+id/twitterButton"
 				        android1:layout_toLeftOf="@+id/twitterButton"
-				        android1:layout_marginRight="15dp"
+				        android1:layout_marginRight="5dp"
 				        android1:background="@drawable/facebook" />
+				    <Button
+				        android1:id="@+id/pinterestButton"
+				        style="@style/topbuttonStyle"
+				        android1:layout_toRightOf="@+id/citpButton"
+				        android1:layout_alignBaseline="@+id/citpButton"
+				        android1:layout_alignBottom="@+id/citpButton"
+				        android1:layout_marginLeft="5dp"
+				        android1:background="@drawable/pinterest" />
 
 				    <Button
 				        android1:id="@+id/donationButton"
-				        android1:layout_width="120dp"
-				        android1:layout_height="120dp"
-				        android1:layout_alignBaseline="@+id/involved"
-				        android1:layout_alignBottom="@+id/involved"
-				        android1:layout_alignParentRight="true"
+				        android1:layout_width="90dp"
+				        android1:layout_height="90dp"
+				        android1:layout_alignRight="@+id/youtubeButton"
+				        android1:layout_below="@+id/youtubeButton"
 				        android1:adjustViewBounds="true"
 				        android1:background="@drawable/bell"
 				        android1:scaleType="fitCenter" />
+
+				    <Button
+				        android1:id="@+id/involved"
+				        style="@style/buttonStyle"
+				        android1:layout_alignBaseline="@+id/donationButton"
+				        android1:layout_alignBottom="@+id/donationButton"
+				        android1:layout_centerHorizontal="true"
+				        android1:text="Get Involved"
+				        android1:textStyle="bold" />
 
                 </RelativeLayout>
 

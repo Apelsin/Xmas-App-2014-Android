@@ -26,8 +26,8 @@
 		 <item name="android:textSize">22sp</item>
     </style>
     <style name="greenbuttonStyle">
-        <item name="android:layout_width">95dp</item>
-        <item name="android:layout_height">110dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">95dp</item>
         <item name="android:background">@drawable/greenornamentlarge</item>
         <item name="android:scaleType">fitCenter</item>
         <item name="android:adjustViewBounds">true</item>
