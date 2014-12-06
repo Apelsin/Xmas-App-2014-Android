@@ -3,6 +3,7 @@ package com.example.xmas_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -61,8 +62,9 @@ Button FAQs, parking, stores, partners, eatsTreat;
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.FAQS");
-				startActivity(intent);
+				Uri uri = Uri.parse("http://christmasinthepark.com/vendors.html");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
 		partners.setOnClickListener(new OnClickListener() {
@@ -70,8 +72,9 @@ Button FAQs, parking, stores, partners, eatsTreat;
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.FAQS");
-				startActivity(intent);
+				Uri uri = Uri.parse("http://christmasinthepark.com/partners.html");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
 		eatsTreat.setOnClickListener(new OnClickListener() {
@@ -79,8 +82,9 @@ Button FAQs, parking, stores, partners, eatsTreat;
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.FAQS");
-				startActivity(intent);
+				Uri uri = Uri.parse("http://christmasinthepark.com/lodging.html");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
 		

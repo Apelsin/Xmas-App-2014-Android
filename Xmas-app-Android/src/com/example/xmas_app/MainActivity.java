@@ -85,8 +85,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.GETINVOLVED");
-				startActivity(intent);
+				Uri uri = Uri.parse("http://christmasinthepark.com/volunteer.html");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
     	vote.setOnClickListener(new OnClickListener() {
@@ -103,8 +104,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.SPONSORS");
-				startActivity(intent);
+				Uri uri = Uri.parse("http://christmasinthepark.com/sponsors.html");
+				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(intent);
 			}
 		});
     	eventschedule.setOnClickListener(new OnClickListener() {

@@ -17,7 +17,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,7 +36,8 @@
         </activity>
         <activity
             android:name=".EventSchedule"
-            android:label="@string/title_activity_event_schedule" >
+            android:label="@string/title_activity_event_schedule"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.EVENT" />
 
@@ -44,7 +46,8 @@
         </activity>
         <activity
             android:name=".VisitorInfo"
-            android:label="@string/title_activity_vistor_info" >
+            android:label="@string/title_activity_vistor_info"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.VISTORINFO" />
 
@@ -53,7 +56,8 @@
         </activity>
         <activity
             android:name=".GetInvolved"
-            android:label="@string/title_activity_get_involved" >
+            android:label="@string/title_activity_get_involved"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.GETINVOLVED" />
 
@@ -62,7 +66,8 @@
         </activity>
         <activity
             android:name=".Sponsors"
-            android:label="@string/title_activity_sponsors" >
+            android:label="@string/title_activity_sponsors"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.SPONSORS" />
 
@@ -71,7 +76,8 @@
         </activity>
         <activity
             android:name=".Vote"
-            android:label="@string/title_activity_vote" >
+            android:label="@string/title_activity_vote"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.VOTE" />
 
@@ -80,7 +86,8 @@
         </activity>
         <activity
             android:name=".FAQS"
-            android:label="@string/title_activity_faqs" >
+            android:label="@string/title_activity_faqs"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.FAQS" />
 
@@ -89,7 +96,8 @@
         </activity>
         <activity
             android:name=".Parkingdirection"
-            android:label="@string/title_activity_parkingdirection" >
+            android:label="@string/title_activity_parkingdirection"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.PARKINGDIRECTION" />
 
