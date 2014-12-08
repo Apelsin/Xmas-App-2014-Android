@@ -5,5 +5,7 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="integration"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_05/jre/lib/ext/core-2.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
