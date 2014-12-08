@@ -1,12 +1,16 @@
 package com.example.xmas_app;
-
 import android.app.Activity;
+import android.content.Intent;
+
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-public class EventSchedule extends Activity {
+public class EventSchedule extends Activity{
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,5 +20,7 @@ public class EventSchedule extends Activity {
 		scheduleView.getSettings().setJavaScriptEnabled(true);
 		scheduleView.getSettings().setBuiltInZoomControls(true);
 		scheduleView.loadUrl("file:///android_asset/html/event-schedule.html");
+
 	}
+
 }

@@ -1,10 +1,15 @@
 package com.example.xmas_app;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +18,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor,donation, mainpage, youtube, twitter, facebook,pinterest;
@@ -95,8 +101,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("android.intent.action.VOTE");
-				startActivity(intent);
+				Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+				intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
+				startActivityForResult(intent, 0);
 			}
 		});
     	sponsor.setOnClickListener(new OnClickListener() {
@@ -152,7 +159,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Uri uri = Uri.parse("https://twitter.com/christmaspark");
+				Uri uri = Uri.parse("https://twitter.com/xmasintheparksj");
 				 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 				 startActivity(intent);
 			}
@@ -189,8 +196,26 @@ public class MainActivity extends Activity {
 		});
     }
 
-    
-    
-    
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+    	 IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (requestCode == 0) {
+            if (resultCode == RESULT_OK) {
+                String contents = intent.getStringExtra("SCAN_RESULT");
+                String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+                
+                Uri uri = Uri.parse(contents);
+				 Intent newintent = new Intent(Intent.ACTION_VIEW, uri);
+				 startActivity(newintent);
+                // Handle successful scan
+            } else if (resultCode == RESULT_CANCELED) {
+                // Handle cancel
+                Toast toast = Toast.makeText(this, "Scan was Cancelled!", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.TOP, 25, 400);
+                toast.show();
+            }
+        }
+         
+    }
+
     
 }
