@@ -13,6 +13,7 @@
         android1:id="@+id/tabhost"
         android1:layout_width="match_parent"
         android1:layout_height="match_parent"
+        android1:layout_alignParentStart="true"
         android1:layout_alignParentLeft="true"
         android1:layout_alignParentTop="true" >
 
@@ -34,116 +35,82 @@
 
                 <RelativeLayout
                     android:id="@+id/tab1"
-    				android:background="@drawable/background"
-                    android:layout_width="match_parent"
+                    android1:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android1:gravity="fill" >
+
+                    <ImageView
+                        android1:id="@+id/ivBackground"
+                        android1:layout_width="wrap_content"
+                        android1:layout_height="wrap_content"
+                        android1:layout_centerHorizontal="true"
+                        android1:layout_centerVertical="true"
+                        android1:scaleType="center"
+                        android1:src="@drawable/background" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton1"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_alignParentTop="true"
+                        android1:layout_centerHorizontal="true"
+                        android1:layout_marginTop="48dp"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton2"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_below="@+id/ImageButton1"
+                        android1:layout_marginRight="-72dp"
+                        android1:layout_marginTop="-48dp"
+                        android1:layout_toLeftOf="@+id/ImageButton1"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton01"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_alignTop="@+id/ImageButton2"
+                        android1:layout_marginLeft="48dp"
+                        android1:layout_toRightOf="@+id/ImageButton2"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton02"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_below="@+id/ImageButton2"
+                        android1:layout_marginRight="-72dp"
+                        android1:layout_marginTop="-48dp"
+                        android1:layout_toLeftOf="@+id/ImageButton2"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton03"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_alignTop="@+id/ImageButton02"
+                        android1:layout_marginLeft="48dp"
+                        android1:layout_toRightOf="@+id/ImageButton02"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
+
+                    <ImageButton
+                        android1:id="@+id/ImageButton04"
+                        android1:layout_width="120dp"
+                        android1:layout_height="144dp"
+                        android1:layout_alignTop="@+id/ImageButton02"
+                        android1:layout_marginLeft="144dp"
+                        android1:layout_toRightOf="@+id/ImageButton02"
+                        android1:scaleType="fitCenter"
+                        android1:src="@drawable/redornamentlarge" />
                     
-                    android:orientation="vertical" >
-				    <Button
-				        android:text="Event Schedule"
-				        android:id="@+id/schedule"
-				        style="@style/buttonStyle"
-				        android:layout_below="@+id/vote"
-				        android:layout_toLeftOf="@+id/sponsors"
-				        android:layout_toStartOf="@+id/sponsors" 
-				        android:textStyle="bold"/>
-				    <Button
-				        android:text="Vistor Info"
-				        android:id="@+id/info"
-				        style="@style/buttonStyle"
-				        android:layout_below="@+id/vote"
-				        android:layout_toRightOf="@+id/schedule"
-				        android:layout_toEndOf="@+id/schedule"
-				        android:textStyle="bold" />
-				    <Button
-				        android:text="Park Map"
-				        android:id="@+id/map"
-				        style="@style/buttonStyle"
-				        android:layout_below="@+id/sponsors"
-				        android:layout_toRightOf="@+id/vote"
-				        android:layout_toEndOf="@+id/vote"
-				        android:textStyle="bold" />
-
-				    <Button
-				        android1:id="@+id/vote"
-				        style="@style/buttonStyle"
-				        android1:layout_alignEnd="@+id/involved"
-				        android1:layout_alignRight="@+id/involved"
-				        android1:layout_below="@+id/involved"
-				        android1:layout_marginRight="51dp"
-				        android1:layout_marginTop="11dp"
-				        android1:text="Vote"
-				        android1:textStyle="bold" />
-
-				    <Button
-				        android1:id="@+id/sponsors"
-				        style="@style/buttonStyle"
-				        android1:layout_above="@+id/info"
-				        android1:layout_alignLeft="@+id/involved"
-				        android1:layout_alignStart="@+id/involved"
-				        android1:layout_marginLeft="40dp"
-				        android1:text="Sponsors"
-				        android1:textStyle="bold" />
-					<Button
-				        android1:id="@+id/citpButton"
-				        android1:background= "@drawable/citp"
-				        style="@style/topbuttonStyle"
-				        android1:layout_centerHorizontal="true" />
-
-				    <Button
-				        android1:id="@+id/youtubeButton"
-				        style="@style/topbuttonStyle"
-				        android1:layout_alignBaseline="@+id/pinterestButton"
-				        android1:layout_alignBottom="@+id/pinterestButton"
-				        android1:layout_toRightOf="@+id/pinterestButton"
-				        android1:layout_marginLeft="5dp"
-				        android1:background="@drawable/youtube" />
-
-				    <Button
-				        android1:id="@+id/twitterButton"
-				        style="@style/topbuttonStyle"
-				        android1:layout_alignBaseline="@+id/citpButton"
-				        android1:layout_alignBottom="@+id/citpButton"
-				        android1:layout_toLeftOf="@+id/citpButton"
-				        android1:layout_marginRight="5dp"
-				        android1:background="@drawable/twitter"/>
-
-				    <Button
-				        android1:id="@+id/facebookButton"
-				        style="@style/topbuttonStyle"
-				        android1:layout_alignBaseline="@+id/twitterButton"
-				        android1:layout_alignBottom="@+id/twitterButton"
-				        android1:layout_toLeftOf="@+id/twitterButton"
-				        android1:layout_marginRight="5dp"
-				        android1:background="@drawable/facebook" />
-				    <Button
-				        android1:id="@+id/pinterestButton"
-				        style="@style/topbuttonStyle"
-				        android1:layout_toRightOf="@+id/citpButton"
-				        android1:layout_alignBaseline="@+id/citpButton"
-				        android1:layout_alignBottom="@+id/citpButton"
-				        android1:layout_marginLeft="5dp"
-				        android1:background="@drawable/pinterest" />
-
-				    <Button
-				        android1:id="@+id/donationButton"
-				        android1:layout_width="90dp"
-				        android1:layout_height="90dp"
-				        android1:layout_alignRight="@+id/youtubeButton"
-				        android1:layout_below="@+id/youtubeButton"
-				        android1:adjustViewBounds="true"
-				        android1:background="@drawable/bell"
-				        android1:scaleType="fitCenter" />
-
-				    <Button
-				        android1:id="@+id/involved"
-				        style="@style/buttonStyle"
-				        android1:layout_alignBaseline="@+id/donationButton"
-				        android1:layout_alignBottom="@+id/donationButton"
-				        android1:layout_centerHorizontal="true"
-				        android1:text="Get Involved"
-				        android1:textStyle="bold" />
-
                 </RelativeLayout>
 
                 <LinearLayout
