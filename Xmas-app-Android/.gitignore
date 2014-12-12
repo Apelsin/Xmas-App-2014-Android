@@ -44,3 +44,4 @@ local.properties
 .target
 # TeXlipse plugin
 .texlipse
+/.apt_generated/

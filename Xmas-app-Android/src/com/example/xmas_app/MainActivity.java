@@ -1,17 +1,11 @@
 package com.example.xmas_app;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
@@ -20,46 +14,80 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
-	Button parkMap, getInvolved, vote, sponsor, eventschedule, vistor,donation, mainpage, youtube, twitter, facebook,pinterest;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.androidannotations.annotations.*;
+import org.androidannotations.annotations.res.*;
+
+@EActivity(R.layout.activity_main)
+public class MainActivity extends Activity
+{
+	// Social
+	@ViewById Button btnFacebook;
+	@ViewById Button btnTwitter;
+	@ViewById Button btnSiteSocial;
+	@ViewById Button btnPinterest;
+	@ViewById Button btnYouTube;
+	
+	// Main Menu
+	@ViewById Button btnGetInvolved;
+	@ViewById Button btnVote;
+	@ViewById Button btnSponsors;
+	@ViewById Button btnEventSchedule;
+	@ViewById Button btnVisitorInfo;
+	@ViewById Button btnParkMap;
+	@ViewById Button btnDonate;
+	
+	// Visitor Info
+//	@ViewById Button btnFAQ;
+//	@ViewById Button btnNovelty;
+//	@ViewById Button btnEatsTreats;
+//	@ViewById Button btnSite;
+//	@ViewById Button btnPartners;
+//	@ViewById Button btnParkingDirections;
+	
+	protected Button[] allOrnamentButtons()
+	{
+		return new Button[] {
+			btnGetInvolved,
+			btnVote,
+			btnSponsors,
+			btnEventSchedule,
+			btnVisitorInfo,
+			btnParkMap,
+//			btnFAQ,
+//			btnNovelty,
+//			btnEatsTreats,
+//			btnSite,
+//			btnPartners,
+//			btnParkingDirections,
+		};
+	}
+	
+	@ViewById WebView wvAboutUs;
+	
+	@StringRes String fontOrnamentButton;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initial();
-        initialOnclick();
+        //initialOnclick();
         
-        //setup about us tab
-        WebView aboutusView = (WebView) findViewById(R.id.AboutUswebView);
-        aboutusView.getSettings().setJavaScriptEnabled(true);
-        aboutusView.getSettings().setBuiltInZoomControls(true);
-        aboutusView.loadUrl("file:///android_asset/html/about.html");
+        // Setup about us tab
+        wvAboutUs.loadUrl("file:///android_asset/html/about.html");
         
     }
-    public void initial(){
-    	//initial for buttons
-    	parkMap = (Button) findViewById(R.id.map);
-        getInvolved = (Button) findViewById(R.id.involved);
-        vote = (Button) findViewById(R.id.vote);
-        sponsor = (Button) findViewById(R.id.sponsors);
-        eventschedule = (Button) findViewById(R.id.schedule);
-        vistor = (Button) findViewById(R.id.info);
-        donation = (Button)findViewById(R.id.donationButton);
-        mainpage = (Button)findViewById(R.id.citpButton);
-        youtube = (Button)findViewById(R.id.youtubeButton);
-        facebook = (Button)findViewById(R.id.facebookButton);
-        pinterest = (Button)findViewById(R.id.pinterestButton);
-        twitter = (Button)findViewById(R.id.twitterButton);
+    public void initial()
+    {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), fontOrnamentButton);
         
-        //initial for font
-        String fontPath = "font.ttf";
-        Typeface tf = Typeface.createFromAsset(MainActivity.this.getResources().getAssets(), fontPath);
-        parkMap.setTypeface(tf);
-        getInvolved.setTypeface(tf);
-        vote.setTypeface(tf);
-        sponsor.setTypeface(tf);
-        eventschedule.setTypeface(tf);
-        vistor.setTypeface(tf);
+        Button[] buttons = allOrnamentButtons();
+        for (Button button : buttons) {
+			button.setTypeface(typeface);
+		}
         
         //initial for tabs
         TabHost tabs = (TabHost) findViewById(R.id.tabhost);
@@ -77,7 +105,7 @@ public class MainActivity extends Activity {
     
     
     public void initialOnclick(){
-    	parkMap.setOnClickListener(new OnClickListener() {
+    	btnParkMap.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -86,7 +114,7 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-    	getInvolved.setOnClickListener(new OnClickListener() {
+    	btnGetInvolved.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -96,7 +124,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	vote.setOnClickListener(new OnClickListener() {
+    	btnVote.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -106,7 +134,7 @@ public class MainActivity extends Activity {
 				startActivityForResult(intent, 0);
 			}
 		});
-    	sponsor.setOnClickListener(new OnClickListener() {
+    	btnSponsors.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -116,7 +144,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	eventschedule.setOnClickListener(new OnClickListener() {
+    	btnEventSchedule.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -125,7 +153,7 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-    	vistor.setOnClickListener(new OnClickListener() {
+    	btnVisitorInfo.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -134,7 +162,7 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-    	donation.setOnClickListener(new OnClickListener() {
+    	btnDonate.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -144,7 +172,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	mainpage.setOnClickListener(new OnClickListener() {
+    	btnSiteSocial.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -154,7 +182,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	twitter.setOnClickListener(new OnClickListener() {
+    	btnTwitter.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -164,7 +192,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	facebook.setOnClickListener(new OnClickListener() {
+    	btnFacebook.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -174,7 +202,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	pinterest.setOnClickListener(new OnClickListener() {
+    	btnPinterest.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -184,7 +212,7 @@ public class MainActivity extends Activity {
 				 startActivity(intent);
 			}
 		});
-    	youtube.setOnClickListener(new OnClickListener() {
+    	btnYouTube.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -196,8 +224,9 @@ public class MainActivity extends Activity {
 		});
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    	 IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+    public void onActivityResult(int requestCode, int resultCode, Intent intent)
+    {
+    	IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
                 String contents = intent.getStringExtra("SCAN_RESULT");
