@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.example.xmas_app" android:versionCode="1"
+	android:versionName="1.0">
+
+
+	<uses-permission android:name="android.permission.CAMERA" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+
+
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
+
+	<application android:allowBackup="true" android:icon="@drawable/citp"
+		android:label="@string/app_name" android:theme="@style/AppTheme">
+		<activity android:name=".MainActivity_" android:label="@string/app_name"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Map" android:label="@string/title_activity_map">
+			<intent-filter>
+				<action android:name="android.intent.action.MAP" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".EventSchedule"
+			android:label="@string/title_activity_event_schedule"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.EVENT" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".VisitorInfo" android:label="@string/title_activity_vistor_info"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.VISTORINFO" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".GetInvolved" android:label="@string/title_activity_get_involved"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.GETINVOLVED" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Sponsors" android:label="@string/title_activity_sponsors"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.SPONSORS" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Vote" android:label="@string/title_activity_vote"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.VOTE" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".FAQS" android:label="@string/title_activity_faqs"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.FAQS" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Parkingdirection"
+			android:label="@string/title_activity_parkingdirection"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.PARKINGDIRECTION" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.zxing.client.android.CaptureActivity"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="stateAlwaysHidden">
+			<intent-filter>
+				<action android:name="com.google.zxing.client.android.SCAN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>
